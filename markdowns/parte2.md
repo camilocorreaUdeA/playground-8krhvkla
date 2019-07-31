@@ -12,7 +12,7 @@ class FooClass
 ```
 
 De acuerdo con lo anterior se puede afirmar que un método debería ser calificado con la palabra `const` siempre y cuando dicho método
-no modifique ninguna de las variables de la clase y que además se pretenda que este método vaya ser accedido por instancias const de la clase
+no vaya a modificar ninguna de las variables de la clase y que además se pretenda que este método vaya ser accedido por instancias const de la clase
 (y no-const también.)
 
 A ver que aprendimos...
