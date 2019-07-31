@@ -4,6 +4,13 @@ Un método calificado con la palabra reservada `const` tiene prohibido modificar
 declaradas con la palabra reservada `mutable`. Un método `const` puede ser invocado tanto por objetos `const` como por objetos que no
 son `const`.
 
+```cpp
+class FooClass
+{
+    int metodoConstFoo(int _a) const; //El calificador 'const' va al final de la firma del método
+};
+```
+
 De acuerdo con lo anterior se puede afirmar que un método debería ser calificado con la palabra `const` siempre y cuando dicho método
 no modifique ninguna de las variables de la clase y que además se pretenda que este método vaya ser accedido por instancias const de la clase
 (y no-const también.)
