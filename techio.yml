@@ -2,6 +2,8 @@ title: Miembros Especiales de la Clase en C++ (Práctica 2)
 plan:
 - title: Variables y métodos static
   statement: markdowns/parte1.md
+- title: Métodos const
+  statement: markdowns/parte2.md
 projects:
   cpp:
     root: /cpp-project
