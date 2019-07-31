@@ -29,5 +29,40 @@ Para acceder a un miembro static `m` de una clase cualquiera `T` se puede hacer 
 de resolución de contexto `T::m` y 2. A través de una expresión de acceso `E` (operadores `.` y `->`) `E.m` o bien `E->m` siempre y cuando `E` se 
 se resuelva (retorne) como `T` o `T*` respectivamente. 
 
+?[¿Se puede acceder a un miembro static a través de un objeto de la clase?]
+-[ ] No, los miembros static no están ligados a instancias de la clase
+-[x] Sí, pueder usarse el operador punto `.`
+-[ ] No, es un comportamiento indefinido en C++
+
+```C++ runnable
+#include<iostream>
+
+using namespace std;
+
+class MyClass
+{
+	public:
+	static int var; //Declaración de una variable 'static'
+	static void oneMethod(); //Declaración de un método 'static'
+};
+
+int MyClass::var = 100; //Definición de la variable 'static'
+
+void MyClass::oneMethod() //Definición del método 'static'
+{
+	cout<<"Hola!!!"<<endl;
+	cout<<"MyClass::var = "<<var<<endl;
+}
+
+int main()
+{
+	MyClass miObjeto;
+	miObjeto.var = 500;
+	miObjeto.oneMethod();
+	
+	return 0;
+}
+```
+
 @[Luke, how many stars are there in these galaxies?]({"stubs": ["src/Exercises/Universe.cpp"],"command": "sh /project/target/run.sh"})
 
