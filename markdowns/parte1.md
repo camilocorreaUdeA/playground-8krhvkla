@@ -25,7 +25,7 @@ Hay que tener en cuenta que la palabra `static` solo debe utilizarse en la decla
 clase, en la definición de los miembros no debe usarse (observe el ejemplo anterior). Observe también la utilización del operador de resolución de
 contexto (ámbito) `::`
 
-Para acceder un miembro static `m` de una clase cualquiera `T` se puede hacer de las siguientes formas: 1. Refieriendose a la clase con el operador
+Para acceder a un miembro static `m` de una clase cualquiera `T` se puede hacer de las siguientes formas: 1. Refieriendose a la clase con el operador
 de resolución de contexto `T::m` y 2. A través de una expresión de acceso `E` (operadores `.` y `->`) `E.m` o bien `E->m` siempre y cuando `E` se 
 se resuelva (retorne) como `T` o `T*` respectivamente. 
 
