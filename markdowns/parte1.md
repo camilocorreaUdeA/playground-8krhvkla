@@ -31,10 +31,12 @@ se resuelva (retorne) como `T` o `T*` respectivamente.
 
 ?[¿Se puede acceder a un miembro static a través de un objeto de la clase?]
 -[ ] No, los miembros static no están ligados a instancias de la clase
--[x] Sí, pueder usarse el operador punto `.`
+-[x] Sí, pueder usarse el operador punto '.'
 -[ ] No, es un comportamiento indefinido en C++
 
 ```C++ runnable
+/* ¡Comprueba tu respuesta aquí mismo! */
+
 #include<iostream>
 
 using namespace std;
@@ -42,13 +44,13 @@ using namespace std;
 class MyClass
 {
 	public:
-	static int var; //Declaración de una variable 'static'
-	static void oneMethod(); //Declaración de un método 'static'
+	static int var; 
+	static void oneMethod(); 
 };
 
-int MyClass::var = 100; //Definición de la variable 'static'
+int MyClass::var = 100; 
 
-void MyClass::oneMethod() //Definición del método 'static'
+void MyClass::oneMethod() 
 {
 	cout<<"Hola!!!"<<endl;
 	cout<<"MyClass::var = "<<var<<endl;
@@ -57,8 +59,8 @@ void MyClass::oneMethod() //Definición del método 'static'
 int main()
 {
 	MyClass miObjeto;
-	miObjeto.var = 500;
-	miObjeto.oneMethod();
+	miObjeto.var = 500;  //Acceso a variable static a través de un objeto
+	miObjeto.oneMethod(); //Acceso a método static a través de un objeto
 	
 	return 0;
 }
