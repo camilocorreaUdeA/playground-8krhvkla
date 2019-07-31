@@ -8,13 +8,11 @@ using namespace std;
 class BigClass::LittleClass
 {
 	public:
-	void printMsg();
+	void printMsg()
+	{
+	   cout<<"Oye!!!...Te hablo desde la prision..."<<endl;
+        }
 };
-
-void LittleClass::printMsg()
-{
-	cout<<"Oye!!!...Te hablo desde la prision..."<<endl;
-}
 
 void BigClass::printMsg()
 {
