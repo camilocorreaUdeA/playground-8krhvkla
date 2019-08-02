@@ -26,7 +26,7 @@ momento de la declaración de un objeto. Sin embargo, es importante resaltar que
 es mayormente utilizado en ciertos patrones e idiomas especiales de diseño de software en los que se le encarga la instanciación de los objetos a
 otros métodos de la clase o a funciones externas amigas de la clase. A continuación se listan los 3 constructores de uso más común en C++:
 
-*Constructor por defecto: Es un constructor que no tiene parámetros de entrada, la inicialización de las variables se hace con valores por defecto
+* Constructor por defecto: Es un constructor que no tiene parámetros de entrada, la inicialización de las variables se hace con valores por defecto
 que el programador codifica en el bloque de código del constructor.
 
 ```C++ runnable
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-*Constructor parametrizado: Es un constructor que tiene parámetros de entrada que se utilizan luego en la inicialización de las variables de clase.
+* Constructor parametrizado: Es un constructor que tiene parámetros de entrada que se utilizan luego en la inicialización de las variables de clase.
 
 ```C++ runnable
 #include<iostream>
@@ -95,7 +95,7 @@ int main()
 }
 ```
 
-*Constructor de copia: Es un constructor que tiene como parámetro de entrada una referencia a otro objeto de la misma clase, por tanto las variables
+* Constructor de copia: Es un constructor que tiene como parámetro de entrada una referencia a otro objeto de la misma clase, por tanto las variables
 del objeto que se está creando se inicializan con los valores de las variables del objeto que se pasa como parámetro. Por esa misma razón se conoce
 como constructor de copia, porque copia los valores de un objeto existente para incializar otro objeto. En la declaración del constructor el parámetro
 de entrada debe tener calificación `const` para evitar modificaciones en el objeto que se está copiando.
