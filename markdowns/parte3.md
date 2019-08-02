@@ -6,7 +6,7 @@ incialización de las variables de la clase y posiblemente ejecutar algunos de l
 clase, es decir, son métodos de la clase que se nombran igual que la clase, y que además no tienen valor de retorno. Las distintas sobrecargas del
 constructor de una clase van a depender de las distintas combinaciones de parámetros de entrada de la función. Cuando no se declara un constructor
 de manera explícita para una clase entonces C++ se encarga de asignar un constructor implícito por defecto a la clase. En esta sección se hará 
-énfasis en 3 tipos de constructores: constructor por defecto, constructor parámetrizado y constructor de copia.
+énfasis en 3 tipos de constructores: constructor por defecto, constructor parametrizado y constructor de copia.
 
 ```C++
 class FooClass
@@ -56,6 +56,40 @@ void FooClass::printVars()
 int main()
 {
 	FooClass fooObj; //Inicialización por defecto
+	fooObj.printVars();
+	return 0;
+}
+```
+
+*Constructor parametrizado: Es un constructor que tiene parámetros de entrada que se utilizan luego en la inicialización de las variables de clase.
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class FooClass
+{
+	int x, y, z;
+	public:
+	FooClass(int, int, int); //Constructor parametrizado
+	void printVars();
+};
+
+FooClass::FooClass(int a, int b, int c)
+{
+	x = a;
+	y = b;
+	z = c;
+}
+
+void FooClass::printVars()
+{
+	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
+}
+
+int main()
+{
+	FooClass fooObj(10,20,30); //Inicialización con parámetros de entrada
 	fooObj.printVars();
 	return 0;
 }
