@@ -55,7 +55,7 @@ void FooClass::printVars()
 
 int main()
 {
-	FooClass fooObj; //Inicializción por defecto
+	FooClass fooObj; //Inicialización por defecto
 	fooObj.printVars();
 	return 0;
 }
