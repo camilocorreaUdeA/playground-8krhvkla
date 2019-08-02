@@ -16,3 +16,34 @@ class NewClass
 
 NewClass::~NewClass(){} //Definición del destructor de la clase
 ```
+
+Los destructores son especialmente útiles para destruir objetos de almacenamiento dinámico, es decir, aquellos para los que se reserva memoria con
+ayuda de un apuntador y el operador `new`. Ese tema se verá más adelante cuando se estudie el manejo dinámico de memoria en C++. En el siguiente
+ejemplo se puede observar la ejecución del destructor de una clase. 
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class NewClass
+{
+	int x;
+	public:
+	NewClass(int _x):x(_x){}
+	~NewClass();
+};
+
+NewClass::~NewClass(){cout<<"Ejecutando destructor..."<<x<<endl;} 
+
+NewClass obj1(1); //Objeto de alcance global
+
+int main()
+{
+	NewClass obj2(2); //Objeto de alcance local
+	{
+		NewClass obj3(3); //Objeto de alcance local
+	}
+	
+	return 0;
+}
+```
