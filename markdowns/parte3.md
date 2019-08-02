@@ -213,15 +213,23 @@ int main()
  desea que los objetos de cierta clase sean copiados entonces puede prohibir la utilización del constructor de copia simplemente mediante el uso
  del operador de asignación `=` y la palabra reservada `delete`.
  
- ```C++
+```C++
  class FooClass
 {
 	int x, y, z; 
 	public:
-	FooClass() = delete; //Obligando al constructor a tomar los valores de la declaración de las variables
-	FooClass(const FooClass&) = delete;  //Se va a utilizar el constructor por copia que implementa el compilador
+	FooClass() = delete; //Se prohibe la utilización del constructor por defecto
+	FooClass(int, int, int); //Único constructor que se puede utilizar
+	FooClass(const FooClass&) = delete;  //Se prohibe la utilización del constructor por copia
 	void printVars();
 };
+
+int main()
+{
+	FooClass obj1; // ¡Error, constructor por defecto deshabilitado!
+	FooClass obj2(1,2,3); // ¡Bien, sin problema!
+	FooClass obj3(obj2); // ¡Error, constructor de copia deshabilitado!
+}
 ```
 
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
