@@ -21,4 +21,44 @@ FooClass::FooClass()
 }
 ```
 
+Por lo general los constructores son de acceso público ya que su uso más común y extendido es la inicialización de las variables de clase al
+momento de la declaración de un objeto. Sin embargo, es importante resaltar que los constructores también pueden tener acceso privado que
+es mayormente utilizado en ciertos patrones e idiomas especiales de diseño de software en los que se le encarga la instanciación de los objetos a
+otros métodos de la clase o a funciones externas amigas de la clase. A continuación se listan los 3 constructores de uso más común en C++:
+
+*Constructor por defecto: Es un constructor que no tiene parámetros de entrada, la inicialización de las variables se hace con valores por defecto
+que el programador codifica en el bloque de código del constructor.
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class FooClass
+{
+	int x, y, z;
+	public:
+	FooClass(); //Constructor por defecto
+	void printVars();
+};
+
+FooClass::FooClass()
+{
+	x = 1;
+	y = 2;
+	z = 3;
+}
+
+FooClass::printVars()
+{
+	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
+}
+
+int main()
+{
+	FooClass fooObj; //Inicializción por defecto
+	fooObj.printVars();
+	return 0;
+}
+```
+
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
