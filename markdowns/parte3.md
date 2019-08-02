@@ -48,7 +48,7 @@ FooClass::FooClass()
 	z = 3;
 }
 
-FooClass::printVars()
+void FooClass::printVars()
 {
 	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
 }
