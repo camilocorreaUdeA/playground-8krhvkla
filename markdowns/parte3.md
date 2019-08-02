@@ -209,5 +209,19 @@ int main()
 	return 0;
 }
 ```
+ También existe la posibilidad de inhibir la utilización de cierto tipo de constructor, por ejemplo si en cierta aplicación el desarrollador no 
+ desea que los objetos de cierta clase sean copiados entonces puede prohibir la utilización del constructor de copia simplemente mediante el uso
+ del operador de asignación `=` y la palabra reservada `delete`.
+ 
+ ```C++
+ class FooClass
+{
+	int x, y, z; 
+	public:
+	FooClass() = delete; //Obligando al constructor a tomar los valores de la declaración de las variables
+	FooClass(const FooClass&) = delete;  //Se va a utilizar el constructor por copia que implementa el compilador
+	void printVars();
+};
+```
 
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
