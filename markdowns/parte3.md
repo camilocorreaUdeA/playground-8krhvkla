@@ -244,7 +244,7 @@ class FooClass
 	int x, y, z;
 	public:
 	FooClass(int, int, int); //Constructor parametrizado 
-	FooClass(const FooClass&);  //Se va a utilizar el constructor por copia que implementa el compilador
+	FooClass(const FooClass&);  //Constructor de copia
 	void printVars();
 };
 
@@ -263,6 +263,31 @@ int main()
 	fooObj1.printVars();
 	FooClass fooObj2 = fooObj1; //Utilizando el operador de asignación
 	fooObj2.printVars();
+	return 0;
+}
+```
+
+Para deshabilitar el uso del operador asignación `=` en la declaración e inicialización de un objeto y que dicha declaración solo deba hacerse
+tal y como está en la declaración del constructor mismo, entonces se usa la palabra reservada `explicit` en la declaración del constructor. Esta
+característica es muy útil cuando en la clase se va a definir una sobrecarga del operador asignación `=`. En la próxima sección se trata el tema
+de sobrecarga de operadores.
+
+```C++
+class FooClass
+{
+	int x, y, z;
+	public:
+	explicit FooClass(int, int, int); //Constructor parametrizado explícito
+	explicit FooClass(const FooClass&);  //Constructor de copia explícito
+	void printVars();
+};
+
+int main()
+{
+	FooClass fooObj1 = {111,222,333}; // ¡Error, el constructor se declaro explícito!
+	FooClass fooObj2(111,222,333); // ¡Bien, así está declarado el constructor!
+	FooClass fooObj3 = fooObj2; // ¡Error, el constructor se declaro explícito!
+	FooClass fooObj4(fooObj2); // ¡Bien, así está declarado el constructor!
 	return 0;
 }
 ```
