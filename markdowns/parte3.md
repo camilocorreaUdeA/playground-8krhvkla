@@ -232,4 +232,39 @@ int main()
 }
 ```
 
+Con el constructor de copia y en general con constructores parametrizados se puede utilizar el operador de asignación `=` para declarar un objeto
+y realizar la inicialización. Por ejemplo:
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class FooClass
+{
+	int x, y, z;
+	public:
+	FooClass(int, int, int); //Constructor parametrizado 
+	FooClass(const FooClass&);  //Se va a utilizar el constructor por copia que implementa el compilador
+	void printVars();
+};
+
+FooClass::FooClass(int a = 1, int b = 2, int c = 3):x(a), y(b), z(c){}
+
+FooClass::FooClass(const FooClass& obj):x(obj.x), y(obj.y), z(obj.z){}
+
+void FooClass::printVars()
+{
+	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
+}
+
+int main()
+{
+	FooClass fooObj1 = {111,222,333}; //Utilizando el operador de asignación
+	fooObj1.printVars();
+	FooClass fooObj2 = fooObj1; //Utilizando el operador de asignación
+	fooObj2.printVars();
+	return 0;
+}
+```
+
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
