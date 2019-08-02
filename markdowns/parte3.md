@@ -140,7 +140,7 @@ int main()
 	return 0;
 }
 ```
-#Consideraciones adicionales acerca de los constructores
+# Consideraciones adicionales acerca de los constructores
 
 Lista de inicialización en constructores por defecto y parametrizados: C++ permite realizar la definición de los constructores por defecto y
 parametrizados utilizando una lista de inicialización que se basa en el uso de los operadores dos puntos `:` y paréntesis `()`. Adicionalmente,
