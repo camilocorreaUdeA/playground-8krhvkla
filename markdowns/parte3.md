@@ -193,6 +193,8 @@ class FooClass
 	void printVars();
 };
 
+// ¡No hay definición del constructor!
+
 void FooClass::printVars()
 {
 	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
