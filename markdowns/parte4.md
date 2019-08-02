@@ -33,7 +33,7 @@ class NewClass
 	~NewClass();
 };
 
-NewClass::~NewClass(){cout<<"Ejecutando destructor..."<<x<<endl;} 
+NewClass::~NewClass(){cout<<"Ejecutando destructor...obj"<<x<<endl;} 
 
 NewClass obj1(1); //Objeto de alcance global
 
