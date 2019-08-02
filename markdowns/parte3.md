@@ -140,5 +140,41 @@ int main()
 	return 0;
 }
 ```
+#Consideraciones adicionales acerca de los constructores
+
+Lista de inicialización en constructores por defecto y parametrizados: C++ permite realizar la definición de los constructores por defecto y
+parametrizados utilizando una lista de inicialización que se basa en el uso de los operadores dos puntos `:` y paréntesis `()`. Adicionalmente,
+vale la pena mencionar que el constructor por defecto se puede definir implícitamente a partir del constructor parametrizado mediante el uso de
+valores por defecto para los parametros de entrada de dicho constructor. Observe y ejecute el ejemplo a continuación:
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class FooClass
+{
+	int x, y, z;
+	public:
+	FooClass(int, int, int);
+	void printVars();
+};
+
+//Utilizando lista de inicialización y valores por defecto
+FooClass::FooClass(int a = 1, int b = 2, int c = 3):x(a), y(b), z(c){}
+
+void FooClass::printVars()
+{
+	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
+}
+
+int main()
+{
+	FooClass fooObj1; //Inicialización con valores por defecto
+	FooClass fooObj2(123, 234, 345); //Inicialización con parámetros de entrada explícitos
+	fooObj1.printVars();
+	fooObj2.printVars();
+	return 0;
+}
+```
 
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
