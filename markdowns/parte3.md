@@ -177,4 +177,33 @@ int main()
 }
 ```
 
+Otra forma de definir de manera implícita un constructor por defecto puede ser obligandolo a tomar como valores para sus variables los que se le 
+asignen a dichas variables directamente en su declaración. Para lograr esto es necesario utilizar el operador de asignación `=` y la palabra reservada
+`default` en la declaración del constructor por defecto.
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class FooClass
+{
+	int x = 1, y = 2, z = 3; //Valores asignados a las variables en la declaración
+	public:
+	FooClass() = default; //Obligando al constructor a tomar los valores de la declaración de las variables
+	void printVars();
+};
+
+void FooClass::printVars()
+{
+	cout<<"x: "<<x<<", y: "<<y<<", z: "<<z<<endl;
+}
+
+int main()
+{
+	FooClass fooObj1;
+	fooObj1.printVars();
+	return 0;
+}
+```
+
 @[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
