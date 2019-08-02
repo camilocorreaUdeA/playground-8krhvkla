@@ -47,3 +47,48 @@ int main()
 	return 0;
 }
 ```
+
+A ver que aprendimos...
+
+?[¿Qué secuencia de números imprime en pantalla el siguiente programa?]
+-[ ] 11223354455688888
+-[x] 112233584488556888
+-[ ] 1234568
+-[ ] 1812283385844855868
+
+```C++
+#include<iostream>
+using namespace std;
+
+class NewClass
+{
+	int x;
+	public:
+	NewClass(int _x):x(_x){cout<<x;}
+	~NewClass();
+};
+
+NewClass::~NewClass(){cout<<"8";} 
+
+NewClass obj1(1); 
+
+int main()
+{
+	cout<<"1";;
+	NewClass obj2(2); 
+	cout<<"2";;
+	{
+		NewClass obj3(3); 
+		cout<<"3";
+        {
+           NewClass obj5(5); 
+        }
+		NewClass obj4(4); 
+		cout<<"4";;		
+	}
+	cout<<"5";
+	NewClass obj5(5); 
+	cout<<"6";
+	return 0;
+}
+```
