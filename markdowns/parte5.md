@@ -22,7 +22,7 @@ class MyClass
 	public:
 	MyClass(int n):x(n){}
 	
-	int operator*(const MyClass& a) //Operador '*' sobrecargado
+	int operator*(const MyClass& a) const //Operador '*' sobrecargado
 	{
 		return x*a.x;
 	}
