@@ -46,7 +46,8 @@ en la clase MiVector3D:
 
 A ver que aprendimos...
 
-?[¿Cuál de las siguientes es una sobrecarga del operador [ ] corchetes para que se pueda averiguar/modificar el valor de una componente sin necesidad de hacer el arreglo público y acceder con el operador punto?]
+?[¿Cuál de las siguientes es una sobrecarga del operador [ ] corchetes para que se pueda averiguar/modificar el valor de una componente
+del arreglo de la clase MiVector 3D sin necesidad de hacer el arreglo público y tener que acceder con el operador punto?]
 -[ ] int operator[](int index)
 -[] double operator[](double index)
 -[ ] double& operator[](double index)
