@@ -8,7 +8,7 @@ plan:
   statement: markdowns/parte3.md
 - title: Destructor
   statement: markdowns/parte4.md
-- title: Sobrecarga de operadores
+- title: Operadores sobrecargados
   statement: markdowns/parte5.md
 projects:
   cpp:
