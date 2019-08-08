@@ -51,3 +51,30 @@ A ver que aprendimos...
 -[] double operator[](double index)
 -[ ] double& operator[](double index)
 -[x] double& operator[](int index)
+
+# Métodos de conversión
+
+Los métodos de conversión son funciones de una clase A que convierten (hacen un "casting") un objeto de la clase A en el tipo de dato
+que se especifique en el método. Se implementan como una sobrecarga del tipo de dato hacia el cual se quiere realizar la conversión. 
+Para implementar una función de conversión se utiliza la palabra `operator`, luego el tipo de dato al que se requiere convertir. Ejemplo:
+
+```C++ runnable
+#include<iostream>
+using namespace std;
+
+class MyClass
+{
+	int x;
+	public:
+	MyClass(int a):x(a){}
+	operator int(){ return x; } //Método de conversión, convierte un objeto de la clase MyClass en un entero (int)
+};
+
+int main()
+{
+	MyClass obj(8);
+	int var = int(obj); //Conversión de MyClass a int (casting explícito de MyClass a int)
+	cout<< var <<endl;
+	cout<< var + obj << endl; //Conversión de MyClass a int (casting implícito de MyClass a int)
+}
+```
