@@ -15,7 +15,8 @@ una sobrecarga del operador `*` para que "multiplique" objetos de la clase MyCla
 ```C++ runnable
 #include<iostream>
 using namespace std;
-classMyClass
+
+class MyClass
 {
 	int x;
 	public:
