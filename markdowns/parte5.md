@@ -1,1 +1,1 @@
-# Sobrecarga de operadores y métodos de conversión
+# Operadores sobrecargados y métodos de conversión
