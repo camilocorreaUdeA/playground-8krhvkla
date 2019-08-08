@@ -56,7 +56,8 @@ A ver que aprendimos...
 
 Los métodos de conversión son funciones de una clase A que convierten (hacen un "casting") un objeto de la clase A en el tipo de dato
 que se especifique en el método. Se implementan como una sobrecarga del tipo de dato hacia el cual se quiere realizar la conversión. 
-Para implementar una función de conversión se utiliza la palabra `operator`, luego el tipo de dato al que se requiere convertir. Ejemplo:
+Para implementar una función de conversión se utiliza la palabra `operator`, luego el tipo de dato al que se requiere convertir y con
+la lista de parámetros de entrada vacía ya que un método de conversión no recibe ningún argumento. Ejemplo:
 
 ```C++ runnable
 #include<iostream>
