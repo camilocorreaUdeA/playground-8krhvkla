@@ -38,3 +38,8 @@ int main()
 	return 0;
 }
 ```
+
+En el ejemplo a continuación se sobrecargan los operadores de las operaciones matemáticas básicas para implementar dichas operaciones
+en la clase MiVector3D:
+
+@[Simple code]({"stubs": ["src/MiVector/mivector.h", "src/MiVector/mivector.cpp", "src/MiVector/main.cpp"],"command": "sh /project/target/run.sh"})
