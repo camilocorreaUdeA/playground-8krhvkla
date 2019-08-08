@@ -43,3 +43,11 @@ En el ejemplo a continuación se sobrecargan los operadores de las operaciones m
 en la clase MiVector3D:
 
 @[Ejemplo operadores sobrecargados en la clase MiVector3D]({"stubs": ["src/MiVector/mivector.h", "src/MiVector/mivector.cpp", "src/MiVector/main.cpp"],"command": "sh /project/target/run.sh"})
+
+A ver que aprendimos...
+
+?[¿Cuál de las siguientes es una sobrecarga del operador [ ] corchetes para que se pueda averiguar/modificar el valor de una componente sin necesidad de hacer el arreglo público y acceder con el operador punto?]
+-[ ] int operator[](int index)
+-[] double operator[](double index)
+-[ ] double& operator[](double index)
+-[x] double& operator[](int index)
