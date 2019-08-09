@@ -315,4 +315,4 @@ int main()
 }
 ```
 
-@[Practica lo que has aprendido]({"stubs": ["src/Constructores/Practica.txt","src/Constructores/constructores.h","src/Constructores/main.cpp"],"command": "sh /project/target/run.sh"})
+@[Practica lo que has aprendido]({"stubs": ["src/Constructores/Practica.txt","src/Constructores/constructores.h","src/Constructores/main.cpp"],"command": "sh /project/target/run1.sh"})
