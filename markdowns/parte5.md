@@ -5,12 +5,9 @@ clasificados de acuerdo al número de operandos sobre los que operan. Luego, hay
 por ejemplo el operador `sizeof`, el operador NOT `~`. Operadores "binarios" que reciben dos operandos, por ejemplo `+`,`-`,`&&`,`%`,
 y operadores "ternarios" que reciben tres operandos, de hecho en C++ solo hay uno y es  el operador `?:`.
 
-Así como se puede sobrecargar funciones en C++ también se puede sobrecargar operadores para que tengan una funcionalidad distinta. Es
-importante mencionar que C++ permite sobrecargar CASI TODOS los operadores existentes pero NO PERMITE implementar nuevos operadores. 
+Así como se puede sobrecargar funciones en C++ también se puede sobrecargar operadores para que tengan una funcionalidad distinta a la original o para que puedan ser implementados en tipos de datos que no los soportan de forma nativa, como las clases que implementa un desarrollador. Es importante mencionar que C++ permite sobrecargar CASI TODOS los operadores existentes pero NO PERMITE implementar nuevos operadores. 
 
-Los operadores de C++ se sobrecargan como si se tratara de la sobrecarga de una función, con la única diferencia de que en lugar del
-nombre de la función se utilizar la palabra `operator` acompañada del símbolo que designa al operador. Por ejemplo, para implementar
-una sobrecarga del operador `*` para que "multiplique" objetos de la clase MyClass:
+Los operadores de C++ se sobrecargan como si se tratara de la sobrecarga de una función (tipo de dato de retorno + nombre + lista de parámetros de entrada), con la única diferencia de que en lugar del nombre de la función se utilizar la palabra `operator` acompañada del símbolo que designa al operador. Por ejemplo, para implementar una sobrecarga del operador `*` para que "multiplique" objetos de la clase MyClass:
 
 ```C++ runnable
 #include<iostream>
