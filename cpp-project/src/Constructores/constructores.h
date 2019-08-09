@@ -9,6 +9,7 @@ class Constructores
 	string c;
 	
 	public:
-	/*Agregue constructores a esta clase */
+	/*Implemente los constructores de esta clase */
+	Constructores(int x, int y, int z){}
 	void printInfo(){ cout<<"int a = "<<a<<" double b = "<<b<<" string c = "<<c<<endl; }	
 };
