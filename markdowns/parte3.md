@@ -315,4 +315,4 @@ int main()
 }
 ```
 
-@[Ejemplo clases anidadas]({"stubs": ["src/Anidadas/anid.h","src/Anidadas/anid.cpp","src/Anidadas/main.cpp"],"command": "sh /project/target/run.sh"})
+@[Ejemplo clases anidadas]({"stubs": ["src/Constructores/Practica.txt","src/Constructores/constructores.h","src/Constructores/main.cpp"],"command": "sh /project/target/run.sh"})
