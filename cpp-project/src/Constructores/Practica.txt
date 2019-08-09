@@ -1,0 +1,7 @@
+¡Practica lo aprendido!
+
+La clase Constructores requiere la implementación de sus constructores.
+Debe implementar los constructores por defector, parametrizado y de copia.
+Solo es necesario codificar dos constructores para tener las 3 implementaciones mencionadas anteriormente.
+Los valores por defecto para la incialización de las variables de la clase son: 1, 0.112233445566 y "Texto por defecto"
+La implementación debe hacerse utilizando lista de inicialización. ¡En la misma definición de la clase por supuesto!
