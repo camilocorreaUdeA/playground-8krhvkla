@@ -1,4 +1,4 @@
 #!/bin/sh
 
-make && ./constructores
+#make && ./constructores
 make && ./mivector
