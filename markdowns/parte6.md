@@ -20,7 +20,9 @@ Desarrolle una aplicación sencilla para construir figuras geométricas, utiliza
 
 <ul>
 <li>Implemente una clase llamada "Vertice" que tiene dos variables tipo double para almacenar las coordenadas (x, y) del punto en el plano cartesiano donde se ubicará un vértice. Esta clase cuenta con los siguientes métodos: Un constructor parametrizado, un constructor de copia y un método const para averiguar el valor de las coordenadas.</li>
-<li>Implemente las siguientes clases: "Circulo", "Triangulo", "Rectangulo", "Pentagono" y "Hexagono". Cada una de estas clases tiene un constructor <b><u>privado</u></b>
+<li>Implemente las siguientes clases: "Circulo", "Triangulo", "Rectangulo", "Pentagono" y "Hexagono". Cada una de estas clases tiene variables para almacenar las coordenadas de sus vértices (¡estas variables son objetos de la clase "Vertice" por supuesto!), un constructor parametrizado <b><u>privado</u></b> y el constructor de copia por defecto debe estar deshabilitado. Estas clases deben tener métodos para calcular el perímetro y el área de la figura en cuestión. </li>
+<li>Implemente una clase "ConstructorFigura" que cuenta con un método <b>static</b> sobrecargado que recibe como parámetros de entrada los vértices (objetos tipo vértice) para construir una figura y como tipo de retorno la clase de la figura que se va a construir. Por ejemplo, la sobrecarga de este método que recibe 3 vértices debería tener como tipo de retorno la clase "Triangulo". Estos métodos deben verificar que dos vertices no sean iguales o que un mismo vertice no sea común a 3 lados al mismo tiempo (en las figuras donde aplique)</li>. Esta clase también debe tener una variable <b>static</b> que lleva la cuenta de cuántas figuras se van creando en la ejecución de la aplicación. <b>NOTA:</b> La sobrecarga que recibe un solo vértice corresponde a la creación de un ojeto de la clase "Ciculo", cuyo radio es la distancia entre las coordenadas indicadas por el vértice y las coordenadas del punto (0,0).</li>
+
 </ul>
 </li>
 </ol>
