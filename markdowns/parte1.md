@@ -55,7 +55,7 @@ int main()
 	MyClass objeto3;
 	MyClass objeto4;
 	
-	cout<<"Se han declarado "<<MyClass::contadorObjetosdelaClase<<"objetos de la clase MyClass"<<endl;
+	cout<<"Se han declarado "<<MyClass::contadorObjetosdelaClase<<" objetos de la clase MyClass"<<endl;
 	
 	MyClass objeto5;
 	MyClass objeto6;
