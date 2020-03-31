@@ -9,6 +9,11 @@ class FooClass
 {
     int metodoConstFoo(int _a) const; //El calificador 'const' va al final de la firma del método
 };
+
+int FooClass::metodoConstFoo(int _a) const
+{
+   //Código del método
+}
 ```
 
 De acuerdo con lo anterior se puede afirmar que un método debería ser calificado con la palabra `const` siempre y cuando dicho método
