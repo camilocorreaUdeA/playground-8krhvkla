@@ -2,7 +2,7 @@
 
 Al interior de la definición de una clase se utiliza la palabra reservada `static` para declarar miembros de la clase que no están ligados
 a ninguna instancia (objeto) de la misma. Por tanto, no se necesita declarar ningun objeto de dicha clase para poder acceder a esos miembros
-[(static: cppreference.com)](https://en.cppreference.com/w/cpp/language/static). También vale la pena mencionar que `static` es de utilidad cuando en una clase se desea declarar miembros del mismo tipo de la clase. En C++ no se permite que una clase tenga miembros no-estáticos del mismo tipo de la clase, el compilador arroja el error: `field 'x' has incomplete type 'Class'`.
+[(static: cppreference.com)](https://en.cppreference.com/w/cpp/language/static). En general, un miembro `static` es un componente de la clase que es compartido por todas las instancias (objetos) de la misma, por ejemplo, una variable `static` conserva su valor para todos los objetos de la clase. También vale la pena mencionar que `static` es de utilidad cuando en una clase se desea declarar miembros del mismo tipo de la clase. En C++ no se permite que una clase tenga miembros no-estáticos del mismo tipo de la clase, el compilador arroja el error: `field 'x' has incomplete type 'Class'`.
 
 ```cpp
 
